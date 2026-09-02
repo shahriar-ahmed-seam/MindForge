@@ -1,0 +1,7 @@
+{
+  "name": "Mind Canvas",
+  "description": "A local-first infinite-canvas brainstorming board combined with a semantic notebook and ambient Gemini AI copilot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

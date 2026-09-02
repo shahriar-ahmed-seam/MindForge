@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#0F172A" />
+                <item android:offset="0.5" android:color="#1E1B4B" />
+                <item android:offset="1.0" android:color="#312E81" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Subtle canvas grid dots -->
+    <path
+        android:fillColor="#226366F1"
+        android:pathData="
+            M18,18h2v2h-2z M36,18h2v2h-2z M54,18h2v2h-2z M72,18h2v2h-2z M90,18h2v2h-2z
+            M18,36h2v2h-2z M36,36h2v2h-2z M54,36h2v2h-2z M72,36h2v2h-2z M90,36h2v2h-2z
+            M18,54h2v2h-2z M36,54h2v2h-2z M54,54h2v2h-2z M72,54h2v2h-2z M90,54h2v2h-2z
+            M18,72h2v2h-2z M36,72h2v2h-2z M54,72h2v2h-2z M72,72h2v2h-2z M90,72h2v2h-2z
+            M18,90h2v2h-2z M36,90h2v2h-2z M54,90h2v2h-2z M72,90h2v2h-2z M90,90h2v2h-2z" />
+</vector>
