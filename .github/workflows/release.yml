@@ -42,8 +42,13 @@ jobs:
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_OUTPUT
           echo "Building Mind Canvas version ${VERSION_NAME} (code ${VERSION_CODE})"
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
+      - name: Ensure Gradle Wrapper and permissions
+        run: |
+          if [ ! -f "gradlew" ]; then
+            echo "gradlew not found, generating wrapper..."
+            gradle wrapper || gradle wrapper --gradle-version 9.3.1
+          fi
+          chmod +x gradlew
 
       - name: Build APK with Gradle
         run: |
