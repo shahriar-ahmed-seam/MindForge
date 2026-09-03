@@ -27,9 +27,15 @@ jobs:
       - name: Restore persistent debug signing key
         run: |
           if [ -f debug.keystore.base64 ]; then
-            echo "Decoding persistent debug keystore..."
+            echo "Decoding persistent debug keystore from debug.keystore.base64..."
             base64 -d debug.keystore.base64 > debug.keystore
           fi
+          if [ ! -f debug.keystore ] || [ ! -s debug.keystore ]; then
+            echo "debug.keystore missing or empty, generating debug keystore..."
+            keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=Android Debug,O=Android,C=US"
+          fi
+          echo "Verifying debug.keystore existence..."
+          ls -la debug.keystore
 
       - name: Calculate version
         id: versioning
